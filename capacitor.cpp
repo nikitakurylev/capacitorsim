@@ -11,7 +11,7 @@ int main()
     double vx, vy = 0, ay;
     cin >> u >> r >> d >> l >> eps >> vx;
     double x = 0, y = r - d / 2;
-    while (x <= l && y <= r) {
+    while (x <= l && y <= r && y >= r - d) {
         ay = Q * u / (y * log(r / (r - d))) / M;
         vy += ay * DELTA;
         x += vx * DELTA;
