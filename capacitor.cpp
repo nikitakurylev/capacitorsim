@@ -12,7 +12,7 @@ int main()
     cin >> u >> r >> d >> l >> eps >> vx;
     double x = 0, y = r - d / 2;
     while (x <= l && y <= r) {
-        ay = Q * u / d / M;
+        ay = Q * u / (y * log(r / (r - d))) / M;
         vy += ay * DELTA;
         x += vx * DELTA;
         y += vy * DELTA;
